@@ -5,6 +5,7 @@
   import Photos from "./Photos.svelte";
   import Posts from "./Posts.svelte";
   import Todos from "./Todos.svelte";
+  import Users from "./Users.svelte";
 
   let selected: JsonURL | "" = "";
 
@@ -56,7 +57,5 @@
 {/if}
 
 {#if selected === "users"}
-  <div>
-    <h1>users</h1>
-  </div>
+  <Users />
 {/if}
