@@ -3,6 +3,7 @@
   import Albums from "./Albums.svelte";
   import Comments from "./Comments.svelte";
   import Photos from "./Photos.svelte";
+  import Posts from "./Posts.svelte";
 
   let selected: JsonURL | "" = "";
 
@@ -46,9 +47,7 @@
 {/if}
 
 {#if selected === "posts"}
-  <div>
-    <h1>posts</h1>
-  </div>
+  <Posts />
 {/if}
 
 {#if selected === "todos"}
