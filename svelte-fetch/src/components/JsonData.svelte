@@ -1,8 +1,8 @@
 <script lang="ts">
   import type { JsonURL } from "../lib/types";
+  import Albums from "./Albums.svelte";
 
   let selected: JsonURL | "" = "";
-  let promise;
 
   const fetchJsonDataButtons: JsonURL[] = [
     "albums",
@@ -12,17 +12,13 @@
     "todos",
     "users",
   ];
-
-  function handleClick(n: JsonURL): void {
-    selected = n;
-  }
 </script>
 
 <div class="flex items-center gap-4">
   {#each fetchJsonDataButtons as button}
     <button
       class={`rounded-md bg-neutral-700 px-2 py-1 capitalize hover:bg-neutral-600 ${selected === button ? "text-white" : "text-neutral-500"}`}
-      on:click={() => handleClick(button)}
+      on:click={() => (selected = button)}
     >
       {`${button}`}
     </button>
@@ -36,9 +32,7 @@
 {/if}
 
 {#if selected === "albums"}
-  <div>
-    <h1>albums</h1>
-  </div>
+  <Albums />
 {/if}
 
 {#if selected === "comments"}
