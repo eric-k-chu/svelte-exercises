@@ -2,6 +2,7 @@
   import type { JsonURL } from "../lib/types";
   import Albums from "./Albums.svelte";
   import Comments from "./Comments.svelte";
+  import Photos from "./Photos.svelte";
 
   let selected: JsonURL | "" = "";
 
@@ -41,9 +42,7 @@
 {/if}
 
 {#if selected === "photos"}
-  <div>
-    <h1>photos</h1>
-  </div>
+  <Photos />
 {/if}
 
 {#if selected === "posts"}
