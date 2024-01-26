@@ -3,7 +3,7 @@
 </script>
 
 <main
-  class="flex min-h-screen flex-col items-center justify-start space-y-8 p-8"
+  class="mx-auto flex min-h-screen max-w-6xl flex-col items-center justify-start space-y-8 p-8"
 >
   <JsonData />
 </main>

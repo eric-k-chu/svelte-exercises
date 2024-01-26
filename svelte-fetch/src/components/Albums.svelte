@@ -17,7 +17,7 @@
   <div class="w-full">
     {#each albums as album}
       <h2 class="font-semibold">
-        Album Title: <span class="font-light">{album.title}</span>
+        Title: <span class="font-light">{album.title}</span>
       </h2>
     {/each}
   </div>

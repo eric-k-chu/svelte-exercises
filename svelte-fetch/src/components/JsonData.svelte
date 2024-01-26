@@ -1,6 +1,7 @@
 <script lang="ts">
   import type { JsonURL } from "../lib/types";
   import Albums from "./Albums.svelte";
+  import Comments from "./Comments.svelte";
 
   let selected: JsonURL | "" = "";
 
@@ -17,7 +18,7 @@
 <div class="flex items-center gap-4">
   {#each fetchJsonDataButtons as button}
     <button
-      class={`rounded-md bg-neutral-700 px-2 py-1 capitalize hover:bg-neutral-600 ${selected === button ? "text-white" : "text-neutral-500"}`}
+      class={`rounded-md bg-neutral-700 px-2 py-1 capitalize hover:bg-neutral-600 ${selected === button ? "text-blue-400" : "text-neutral-500"}`}
       on:click={() => (selected = button)}
     >
       {`${button}`}
@@ -36,9 +37,7 @@
 {/if}
 
 {#if selected === "comments"}
-  <div>
-    <h1>comments</h1>
-  </div>
+  <Comments />
 {/if}
 
 {#if selected === "photos"}
